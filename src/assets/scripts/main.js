@@ -14,3 +14,16 @@
   const university = "UOC";
   console.log(`Hello, ${university}!`);
 } )();
+
+$('.menu').click(function(){
+  $('.menunav').show();
+});
+$('.btn_x').click(function(){
+  $('.menunav').hide();
+});
+
+// const menu = document.querySelector('.menu');
+// const menunav = document.querySelector('.menunav');
+// menu.addEventListener('click',function(){
+//   menunav.style.display = "initial"
+// })

@@ -14,7 +14,57 @@ body {
   background-color: variables.$staf-bg;
   color: variables.$staf-corporate;
 }
+.menunav {
+  background-color: #015660;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 20px;
+  display: none;
 
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px 50px;
+    margin: auto 30px;
+    border-bottom: solid white 1px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  .btn_x {
+    font-size: 1.5rem;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+  }
+}
+header {
+  background-color: #015660;
+  h1,p {
+    color: white;
+  }
+}
+.top_container {
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  font-size: 1.5rem;
+  color: white;
+  padding: 15px;
+  user-select: none;
+  cursor: pointer;
+}
+.socialmedias {
+  width: 400px;
+  height: 20px;
+  background-color: #f7dc4f;
+}
 .staf-container {
   max-width: 800px;
   margin: auto;
