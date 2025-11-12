@@ -21,6 +21,17 @@ $('.menu').click(function(){
 $('.btn_x').click(function(){
   $('.menunav').hide();
 });
+$('.menunav li:first-of-type()').click(function(){
+  $('.menu').hide();
+  $('.menunav').hide();
+  $('.nav_cv').animate({
+    left:0
+  },2000);  
+});
+$('.btn_x_cv').click(function(){
+  $('.nav_cv').css('left','-500px');
+  $('.menu').show();
+});
 
 // const menu = document.querySelector('.menu');
 // const menunav = document.querySelector('.menunav');
