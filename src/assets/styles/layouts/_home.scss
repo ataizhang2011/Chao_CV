@@ -1,17 +1,18 @@
 @use "../variables";
 * {
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
+  // box-sizing: border-box;
 }
 body {
   // display: flex;
   // flex-direction: column;
   // height: 100vh;
-  margin: 0;
+  // margin: 0;
   // padding: 20px;
   font-family: variables.$font-family-sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 34px;
   // background-color: variables.$staf-bg;
   // color: variables.$staf-corporate;
 }
@@ -19,7 +20,7 @@ body {
   background-color: #015660;
   position: fixed;
   height: 100%;
-  width:100%;
+  width: 100%;
   color: white;
   padding: 20px;
   display: none;
@@ -49,12 +50,14 @@ body {
 .miFoto {
     width: 100%;
     max-width: 430px;
+    ;
   }
 .bgazul {
   background-color: #015660;
-  max-width: 430px;
+  // max-width: 430px;
 }
 header {
+  background-color: #c5c4c4;
   h1:first-of-type {
     color: #f7dc4f;
     margin-top: 20px;
@@ -66,6 +69,21 @@ header {
     color: white;
     margin-left: 40px;
     margin-top: 25px;
+  }
+  h2 {
+    text-align: center;
+    padding: 20px;
+  }
+  figcaption {
+    padding:20px;
+  }
+  .cvcompleto {
+    text-decoration: none;
+    background-color: #f7dc4f;
+    width: fit-content;
+    padding: 10px 50px;
+    margin: 20px 80px;
+    display: inline-block;    
   }
 }
 .top_container {
@@ -101,7 +119,7 @@ header {
   position: absolute;
   top: 60px;
   background-color: #015660;
-  left: -500px;
+  left: -600px;
   h1,h2 {
     color: #f7dc4f;
   }
@@ -124,6 +142,14 @@ header {
   right: -360px;
   user-select: none;
   cursor: pointer;
+}
+
+#desinos {
+  text-align: center;
+  h3 {
+    margin: 20px auto;
+    color: #f7dc4f;
+  }
 }
 
 // .staf-logo {

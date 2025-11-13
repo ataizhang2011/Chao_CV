@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>jQuery Slide 2</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		
+		.slides {
+			margin: auto;
+			width: 640px;
+			background-color: yellow;
+		}
+		figure.slide {
+			position: relative;
+		}
+		figcaption {
+            position: absolute;
+            bottom: 4px;
+            background-color: #0005;
+            color: white;
+            left: 0;
+            right: 0;
+            padding: 10px;
+		}
+		.nav {
+			display: flex;
+			gap: 10px;
+			justify-content: center;
+		}
+		
+		.nav > div {
+			width: 10px;
+			height: 10px;
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	<section id="gallery">
+	    <div class="slides">
+	    	<figure class="slide">
+	    		<img src="img/0.jpg">
+	    		<figcaption>Lago bonito</figcaption>
+	    	</figure>
+	    	<figure class="slide">
+	    		<img src="img/1.jpg">
+	    		<figcaption>China town</figcaption>
+	    	</figure>
+	    	<figure class="slide">
+	    		<img src="img/2.jpg">
+	    		<figcaption>Rosas blancas</figcaption>
+	    	</figure>
+	    </div>
+		<div class="nav">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</section>
+
+	<script>
+		let indice = 0;
+		//desaparecer todos los slides
+	    $('.slide').css('display','none');  //hide()
+		$('.slide').eq(indice).css('display','block');  //show()
+		$('.nav > div').eq(indice).css('background-color','yellow');
+
+		$('.nav > div').click(function(){
+			//desaparecer todos los slides
+		    $('.slide').css('display','none');  //hide()
+		
+            $('.nav > div').css('background-color','orange');
+			indice = $(this).index();
+
+			//aparecer el primer slide
+			$('.slide').eq(indice).css('display','block');  //show()
+			$('.nav > div').eq(indice).css('background-color','yellow');
+		});
+	</script>
+	
+</body>
+</html>

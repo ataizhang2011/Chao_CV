@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>AF-10-Luxio Studio</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		/*nav*/
+		nav {
+			background-color: #000;
+	        color: white;
+	        position: fixed;
+	        top: 0;
+	        right: -350px;
+	        bottom: 0;
+            transition: 1s;
+            z-index: 100;
+            width: 350px ;
+		}
+		.navh2 {
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 20px;
+			margin-bottom: 30px;
+		}
+		.btn_x {
+			font-size: 2rem;
+            user-select: none;
+            cursor: pointer;
+		}
+		nav li {
+			font-size: 18px;
+    		list-style: none;
+    		padding: 15px;
+    		border-bottom: solid 1px grey;
+    		margin: auto 30px;
+		}
+		nav a {
+			text-decoration: none;
+			color: white;
+		}
+		/*header*/
+		header {			
+			background-image: linear-gradient(to right,#0006,#0006),url(img/architecture.jpg);
+			background-size: cover;			
+			color: white;			
+		    overflow: hidden;
+		}
+		header .luxe {
+		   	display: flex;
+			justify-content: space-between;
+			gap: 200px;
+			padding: 20px 10px;
+			margin-bottom: 30px;
+		}
+		.luxe .studio {
+			font-size: 15px;
+			color: lightgrey;
+		}
+		.luxe h2 {
+            user-select: none;       
+            cursor: pointer;            
+		}
+		.menu {
+			font-size: 2rem;
+		    user-select: none;       
+            cursor: pointer;
+		}
+		.craft {
+            padding: 120px 10px;
+            position: relative;
+        }
+		.craft h1 {			
+            max-width: 400px;
+            position: absolute;
+            top: 20px;
+        }
+		.craft p {
+			font-family: sans-serif;
+			font-size: 20px;
+			color: lightgrey;
+            margin: 40px auto;
+            max-width: 480px;
+		}
+		.craft .btn_view {
+			margin: auto;
+			text-decoration: none;
+			color: white;
+			display: inline-block;
+		    background-color:orange;  
+            padding: 15px 145px;
+            border-radius: 8px;
+            font-family: sans-serif;
+            font-weight: 700;
+		}
+		.btn_view:hover {
+            opacity: .5;
+            transform:scale(0.98);
+		}
+		.craft .btn_start {
+			text-decoration: none;
+			display: inline-block;
+            color: white;
+			border:solid 2px white;
+			border-radius: 15px;
+            padding: 15px 120px;
+            margin: 15px auto;
+            font-family: sans-serif;
+            font-weight: 700;    
+		}
+        .btn_start:hover {
+            background-color: white;
+            color: black;
+            transition: .5s;
+		}
+		.spaces {
+			color:#d4a574;
+		}
+		.flecha1 {			
+			text-decoration: none;
+			display: inline-block;
+			color: white;
+			font-size: 2rem;
+			margin: 20px auto;			
+		}
+		.flecha2 {
+			text-decoration: none;
+			display: inline-block;
+			color: white;
+			font-size: 1rem;
+		}
+	</style>
+</head>
+<body>
+	<!-- <input type="color"> -->
+	<nav>
+		<div class="navh2">
+			<h2>Menu</h2>	
+	     	<span class="btn_x">&times;</span>	
+		</div>	     		
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Portfolio</a></li>
+			<li><a href="#">Process</a></li>	
+			<li><a href="#">Testimonials</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	<header>
+		<div class="luxe">
+			<h2>LUXE<br><span class="studio">STUDIO</span></h2>
+			<label class="menu">&#9776;</label>	
+		</div>
+		<div class="craft">
+			<h1>Crafting Extraordinary <span class="spaces">Spaces</span></h1>
+			<p>Where architectural vision meets interior elegance to create environments that inspire and elevate everyday living.</p>
+			<a href="#" class="btn_view">VIEW OUR WORK</a>
+			<a href="#" class="btn_start">START YOUR PROJECT</a>
+		</div>		
+		<a href="#" class="flecha1">&#8595;</a>
+	</header>
+	<main>
+		<section id="about">
+			<figure class="aboutimg">
+				<img src="img/team.jpg" alt="team">
+				<figcaption>ABOUT US</figcaption>
+			</figure>
+			<div>
+				<h2>Visionary Design Exceptional Craftsmanship</h2>
+				<h3>With over two decades of experience, Luxe Studio has redefined the boundaries between architecture and interior design.</h3>
+				<p>Our team of award-winning architects and designers collaborate closely with clients to transform spaces into extraordinary environments that reflect their unique vision and lifestyle.</p>
+				<div>
+					<div>
+						<h2>200+</h2>
+						<p>Projects completed</p>
+					</div>
+					<div>
+						<h2>15+</h2>
+						<p>Awards Won</p>
+					</div>
+					<div>
+						<h2>98%</h2>
+						<p>Client Satisfaction</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<a href="#" class="flecha2">&#8593;</a>
+	</main>
+	<script>
+		$('.menu').click(function(){
+			$('nav').css('right','0');
+		});
+		$('.btn_x').click(function(){
+			$('nav').css('right','-350px');
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>	
+		.libro {
+			width: 300px;
+			background-color: #f8f8f8;
+			padding: 10px;
+			border-radius: 5px;
+			box-shadow: 0 0 5px black;
+		}
+	</style>	
+</head>
+<body>
+	<div id="container"></div>	
+<script>
+	const container = document.querySelector('#container')
+	class Libro {
+		constructor(titulo, autor, ISBN, sinopsis, portada, precio){
+			this.titulo = titulo;
+			this.autor = autor;
+			this.ISBN = ISBN;
+			this.sinopsis = sinopsis;
+			this.portada = portada;
+			this.precio = precio;
+		}
+		comprar(){
+			let cantidad = prompt('¿cuántos libros quieres comprar?');
+			alert(`${this.titulo} cuesta ${this.precio}, al comprar ${cantidad}, el precio total es de  ${this.precio*cantidad}`);
+		}
+	}
+	const libros = [];
+	libros.push(new Libro('Harry Potter', 'J. K. Rowling', '9788419275806', 'Harry Potter nunca ha oído hablar de Hogwarts hasta que empiezan a caer unas misteriosas cartas en el felpudo del número 4 de Privet Drive.','https://imagessl6.casadellibro.com/a/l/s7/06/9788419275806.webp', 19.9));
+	libros.push(new Libro('Africanus', "Santiago Posteguillo", "9784545321", "Va de Roma y la familia Escipión", "https://imagessl3.casadellibro.com/a/l/s7/83/9788413143583.webp", 23.50));
+	libros.push(new Libro('El Ultimo Secreto','Dan Brown','9788408305853','Ls novela mas trepidante de mastro indiscutible del thriller.','https://imagessl3.casadellibro.com/a/l/s7/63/9788408306863.webp',23.65))
+
+    for(let i in libros){
+		container.insertAdjacentHTML('beforeend',`
+			<div class="libro">
+				<h2>${libros[i].titulo}</h2>
+				<p>Autor: ${libros[i].autor}</p>
+				<img src=${libros[i].portada} alt="${libros[i].titulo}" width="150">
+				<p>ISBN: ${libros[i].ISBN}</p>
+				<p>${libros[i].sinopsis}</p>
+				<p>Precio: ${libros[i].precio}€</p>
+				<button>Comprar</button>
+			</div>
+		`);
+    }
+    container.style.display = "flex";
+
+</script>
+</body>
+</html>

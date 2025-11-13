@@ -21,7 +21,7 @@ $('.menu').click(function(){
 $('.btn_x').click(function(){
   $('.menunav').hide();
 });
-$('.menunav li:first-of-type()').click(function(){
+$('.cvcompleto').click(function(){
   $('.menu').hide();
   $('.menunav').hide();
   $('.nav_cv').animate({

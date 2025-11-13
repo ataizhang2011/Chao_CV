@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>AF11 - UF1306 - Projecte final | Galeria Modal OPCIONAL</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background-color: grey;
+			color: #fff;
+			text-align: center;
+		}
+		ul.galeria {
+			background-color: #000;
+			display: grid;
+			padding: 10px;
+			grid-template-columns: 3fr 2fr 3fr;
+			gap: 15px;
+			max-width: 900px;
+			margin: 10px auto;
+		}
+		.galeria li {
+			overflow: hidden;			
+		}
+		.galeria img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			opacity: .8;
+		}
+		.galeria img:hover {
+			opacity: 1;
+			transform: scale(1.1);
+			transition: 1s;
+			user-select: none;
+			cursor: pointer;
+		}
+		li:first-of-type {
+			grid-row: span 2;
+		}
+		li:nth-of-type(2) {
+			grid-column: span 2;
+		}
+		li:nth-of-type(4) {
+			grid-row: span 2;
+		}
+	    li:nth-of-type(10) {
+			grid-row: span 2;
+		}
+		li:nth-of-type(11) {
+			grid-row: span 2;
+		}
+		li:nth-of-type(5) {
+			grid-column: span 2;
+		}
+		.modal {		
+			margin: 50px auto;
+			display: none;
+		}
+		.modalFrame {
+			position: relative;
+			width: 640px;
+			height: 428px;
+			box-sizing: border-box;
+			margin: 50px auto;
+			overflow: hidden;
+		}
+
+		.modalFrame img {
+            width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.botonx {
+			position: fixed;
+			font-size: 2rem;
+			top: 20px;
+			right: 20px;
+			cursor: pointer;			
+		}
+		.boton {
+			position: absolute;
+			font-size: 3rem;
+			padding: 0 10px;
+			top:40%;
+			opacity: .8;
+			z-index: 100;
+		}
+		.boton:hover {
+			opacity: 1;
+			cursor: pointer;
+			transition: .2s;
+		}
+		.izquierda {
+			position: absolute;
+			left: 0;
+		}
+		.derecha {
+			position: absolute;
+			right: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<ul class="galeria"></ul>
+
+	<div class="modal">		
+		<span class="botonx" onclick="closeModal()">&times;</span>
+		<div class="modalFrame">
+		    <img src="" id="imagenModal" alt="">
+			<div class="boton izquierda" onclick="prevImag()">&#10094;</div>
+			<div class="boton derecha" onclick="nextImage()">&#10095;</div>
+		</div>
+	</div>
+	
+	<script>
+		let currentIndex =0;
+		const galeria = document.querySelector('.galeria');
+		const imagenModal = document.getElementById('imagenModal');
+		const modal = document.querySelector('.modal');
+		const images = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg', 'img/5.jpg', 'img/6.jpg', 'img/7.jpg', 'img/8.jpg', 'img/9.jpg', 'img/10.jpg', 'img/11.jpg', 'img/12.jpg'];
+		images.forEach(function(e,i){
+			galeria.insertAdjacentHTML('beforeend', "<li><img src="+e+" onclick='muestraModal("+i+")'>");            
+		});
+
+		function muestraModal(i){
+			currentIndex = i;
+			imagenModal.src = images[currentIndex];	
+			galeria.style.display = 'none';	
+            modal.style.display = 'flex';
+		}
+		function nextImage(){
+			if(currentIndex <= 10){
+				currentIndex++;
+		     	imagenModal.src = images[currentIndex];
+			}else {
+				currentIndex = 0;
+			}
+			
+		}	
+		function prevImag(){
+			if(currentIndex > 0){
+				currentIndex--;
+			    imagenModal.src = images[currentIndex];
+			}else {
+				currentIndex = 10;
+			}
+			
+		}	
+        function closeModal(){
+        	modal.style.display = 'none';
+        	galeria.style.display = 'grid';	
+        }
+    </script>
+</body>
+</html>
