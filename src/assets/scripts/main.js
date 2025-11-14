@@ -28,6 +28,12 @@ $('.cvcompleto').click(function(){
     left:0
   },2000);  
 });
+$('.desino').click(function(){
+  $('.menunav').hide();
+});
+$('.contacto').click(function(){
+  $('.menunav').hide();
+});
 $('.btn_x_cv').click(function(){
   $('.nav_cv').css('left','-500px');
   $('.menu').show();

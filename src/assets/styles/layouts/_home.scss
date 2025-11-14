@@ -158,7 +158,174 @@ header {
     max-width: 427px;
   }
 }
-
+#Contacto {
+  background-color: #015660;
+  h3 {
+    font-size: 24px;
+    padding: 30px;
+    text-align: center;
+    color: #f7dc4f;
+  }
+  h4 {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+form {    		
+  padding: 20px;  
+  h3 {
+    text-align: center;
+    color: white;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: 150;
+  }
+  label {
+    color: white;        
+  }
+  input {
+    display: block;
+    background-color: #015660;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 2px solid #c5c4c4;
+    margin: 15px 0;       
+  }
+  input:focus {
+    outline: 2px solid green ;
+  }
+  textarea {
+    padding: 60px 100px;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 15px;
+    box-sizing: border-box;
+    border:2px solid #c5c4c4;
+    background-color: #015660;	
+  }
+  textarea:focus {
+    outline: 2px solid green;
+  }
+  input[type="submit"] {
+    background-color:#015660 ;
+    color: white;
+    width: 200px;
+    border-radius: 30px;
+    border: 2px solid white;
+    cursor: pointer;
+    user-select: none;
+    margin: 5px auto;
+  }
+  ::placeholder {
+    color: #8DCCA9;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+}
+footer {
+  text-align: center;
+  color: #015660;
+  padding: 80px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+@media (min-width: 500px) {
+  .menunav {
+  background-color: #015660;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  color: white;
+  padding: 20px;
+  display: none;
+li {
+  text-align: center;
+  list-style: none;
+  display: block;
+  padding: 20px 50px;
+  margin:auto 80px;
+  border-bottom: solid white 1px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+  
+.btn_x {
+  font-size: 1.5rem;
+  color: white;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  right: -350px; 
+}
+}
+.miFoto {
+  width: 100%;
+  max-width: 430px;
+  margin: 10px auto; 
+}
+.bgazul {
+  background-color: #015660;
+}
+header {
+  background-color: #c5c4c4;
+  h1:first-of-type {
+    color: #f7dc4f;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  h1:nth-of-type(2),p{
+    color: white;
+    margin-left: 40px;
+    margin-top: 25px;
+  }
+  h2 {
+    text-align: center;
+    padding: 20px;
+  }
+  figcaption {
+    padding:20px;
+  }
+  .cvcompleto {
+    text-decoration: none;
+    background-color: #f7dc4f;
+    width: fit-content;
+    padding: 10px 50px;
+    margin: 20px 80px;
+    display: inline-block;    
+  }
+}
+.top_container {
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  font-size: 1.5rem;
+  color: white;
+  padding: 20px 10px;
+  user-select: none;
+  cursor: pointer;
+  display: none;
+}
+.socialmedias {
+  height: 25px;
+  background-color: #f7dc4f;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 40px;
+  align-items: center;
+}
+}
 
 // .staf-logo {
 //   display: block;
