@@ -46,24 +46,12 @@ li {
   right: -350px; 
 }
 }
-.miFoto {
-  width: 100%;
-  max-width: 430px;
-  margin: 10px auto; 
-}
 .bgazul {
   background-color: #015660;
 }
 header {
   background-color: #c5c4c4;
-  h1:first-of-type {
-    color: #f7dc4f;
-    margin-top: 20px;
-    margin-left: 40px;
-    margin-bottom: 20px;
-    font-weight: 400;
-  }
-  h1:nth-of-type(2),p{
+  h1,p{
     color: white;
     margin-left: 40px;
     margin-top: 25px;
@@ -89,17 +77,16 @@ header {
   justify-content: space-between;
 }
 .menu {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: white;
-  padding: 20px 10px;
+  padding: 20px;
+  margin-right: 20px;
   user-select: none;
   cursor: pointer;
 }
 .socialmedias {
   height: 25px;
   background-color: #f7dc4f;
-  display: flex;
-  justify-content: space-evenly;
   margin: 10px 40px;
   align-items: center;
 }
@@ -116,6 +103,7 @@ header {
 .nav_cv {
   position: absolute;
   top: 60px;
+  padding: 40px;
   background-color: #015660;
   left: -600px;
   h1,h2 {
@@ -154,8 +142,10 @@ header {
 	flex-direction: column;
 	justify-content: space-evenly ;
 	align-items: center;
-  img {
-    max-width: 427px;
+  figure {
+   img {
+    max-width: 327px;
+   }
   }
 }
 #Contacto {
@@ -237,54 +227,25 @@ footer a {
   color: white;
 }
 @media (min-width: 500px) {
-  .menunav {
-  background-color: #015660;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  color: white;
-  padding: 20px;
-  display: none;
-li {
-  text-align: center;
-  list-style: none;
-  display: block;
-  padding: 20px 50px;
-  margin:auto 80px;
-  border-bottom: solid white 1px;
-  a {
-    text-decoration: none;
-    color: white;
+.menunav {
+  position: initial;
+  display: flex;
+  justify-content: space-evenly;
+  li {
+   display: inline-block;
+   margin:auto;
+   border-bottom: none;
   }
-}
-  
-.btn_x {
-  font-size: 1.5rem;
-  color: white;
-  user-select: none;
-  cursor: pointer;
-  position: relative;
-  right: -350px; 
-}
-}
-.miFoto {
-  width: 100%;
-  max-width: 430px;
-  margin: 10px auto; 
+ .btn_x {
+  display: none;
+ }
 }
 .bgazul {
   background-color: #015660;
 }
 header {
   background-color: #c5c4c4;
-  h1:first-of-type {
-    color: #f7dc4f;
-    margin-top: 20px;
-    margin-left: 40px;
-    margin-bottom: 20px;
-    font-weight: 400;
-  }
-  h1:nth-of-type(2),p{
+  h1,p{
     color: white;
     margin-left: 40px;
     margin-top: 25px;
@@ -326,6 +287,60 @@ header {
   align-items: center;
 }
 }
+
+nav_cv {
+  position: absolute;
+  top: 60px;
+  background-color: #015660;
+  left: -600px;
+  h1,h2 {
+    color: #f7dc4f;
+  }
+  li {
+    list-style: none;
+    display: inlinblock;
+    color: white;
+    margin: 15px auto;
+  }
+  li:nth-of-type(6) {
+    margin-bottom: 35px;
+    border-bottom: solid 1px white;
+  }
+}
+
+.btn_x_cv {
+  color: white;
+  font-size: 2rem;
+  position: relative;
+  right: -360px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#desinos {
+  text-align: center;
+  h3 {
+    margin: 20px auto;
+    color: #f7dc4f;
+  }
+}
+.flexContainer {
+	display: flex;
+	flex-direction: row;
+  flex-wrap: wrap;
+	gap: 25px;
+  figure {
+    flex: 1 1 300px;
+  }
+}
+#Contacto {
+  form {
+  max-width: 600px; 
+  margin: 10px auto; 
+  } 
+}
+
+
 
 // .staf-logo {
 //   display: block;
