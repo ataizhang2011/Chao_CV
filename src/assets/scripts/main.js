@@ -23,7 +23,7 @@ $('.btn_x').click(function(){
 });
 $('.menunav').click(function(){
   $(this).hide();
-  
+  $('.menu').show();
 });
 $('.cvcompleto').click(function(){
   $('.menu').hide();
@@ -44,6 +44,7 @@ $('.btn_x_cv').click(function(){
 });
 $('.nav_cv').click(function(){
   $(this).hide();
+  $('.menu').show();
 });
 
 // const menu = document.querySelector('.menu');
