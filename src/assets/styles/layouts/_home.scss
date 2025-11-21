@@ -102,9 +102,8 @@ header {
 // }
 .nav_cv {
   position: absolute;
-  width: 100%;
   top: 60px;
-  margin-left: 40px;
+  padding: 40px;
   background-color: #015660;
   left: -600px;
   h1,h2 {
@@ -112,7 +111,7 @@ header {
   }
   li {
     list-style: none;
-    display:inline-block;
+    display:block;
     color: white;
     margin: 15px auto;
   }
@@ -120,16 +119,21 @@ header {
     margin-bottom: 35px;
     border-bottom: solid 1px white;
   }
+  .cv {
+  display: flex;
+  justify-content: space-between;
+    .btn_x_cv {
+      color: white;
+      font-size: 2rem;
+      position: absolute;
+      right:150px;
+      user-select: none;
+      cursor: pointer;
+    }
+  }
 }
 
-.btn_x_cv {
-  color: white;
-  font-size: 2rem;
-  position: absolute;
-  right:50px;
-  user-select: none;
-  cursor: pointer;
-}
+
 
 #desinos {
   text-align: center;
