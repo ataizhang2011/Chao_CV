@@ -124,8 +124,8 @@ header {
 .btn_x_cv {
   color: white;
   font-size: 2rem;
-  position: relative;
-  right: -360px;
+  position: absolute;
+  right:50px;
   user-select: none;
   cursor: pointer;
 }

@@ -21,6 +21,9 @@ $('.menu').click(function(){
 $('.btn_x').click(function(){
   $('.menunav').hide();
 });
+$('.menunav').click(function(){
+  $(this).hide();
+});
 $('.cvcompleto').click(function(){
   $('.menu').hide();
   $('.menunav').hide();
