@@ -119,21 +119,16 @@ header {
     margin-bottom: 35px;
     border-bottom: solid 1px white;
   }
-  .cv {
-  display: flex;
-  justify-content: space-between;
-    .btn_x_cv {
-      color: white;
-      font-size: 2rem;
-      position: absolute;
-      right:150px;
-      user-select: none;
-      cursor: pointer;
-    }
-  }
 }
 
-
+.btn_x_cv {
+  color: white;
+  font-size: 2rem;
+  position: relative;
+  left:220px;
+  user-select: none;
+  cursor: pointer;
+}
 
 #desinos {
   text-align: center;
