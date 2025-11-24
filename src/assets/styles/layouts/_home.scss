@@ -59,6 +59,7 @@ header {
   h2 {
     text-align: center;
     padding: 20px;
+    color: #f7dc4f;
   }
   figcaption {
     padding:20px;
@@ -66,10 +67,12 @@ header {
   .cvcompleto {
     text-decoration: none;
     background-color: #f7dc4f;
+    color: #015660;
     width: fit-content;
-    padding: 10px 50px;
-    margin: 20px 80px;
-    display: inline-block;    
+    padding: 5px 50px;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;   
   }
 }
 .top_container {
@@ -217,6 +220,29 @@ form {
     left: 15px;
   }
 }
+.flecha {
+			background-color:#f7dc4f;
+      display: block;
+      // box-sizing: border-box;
+      width: 15px;
+      height: 25px;
+      padding: 0 0 10px 0;
+      border-radius: 50%;
+			color: #015660;
+      font-size: 1.5rem;
+			text-decoration: none;
+			position: fixed;
+      left:50%;
+      transform: translateX(-50%);
+			bottom: 15px;
+			// margin:0 auto;     
+      text-align: center; 
+      opacity: 0.6;
+		}
+.flecha:hover {
+  transform:scale(1.2);
+}
+
 footer {
   text-align: center;
   color: #015660;
@@ -226,6 +252,7 @@ footer a {
   text-decoration: none;
   color: white;
 }
+
 @media (min-width: 500px) {
 .menunav {
   position: initial;
@@ -339,27 +366,7 @@ nav_cv {
   margin: 10px auto; 
   } 
 }
-.flecha {
-			background-color:#f7dc4f;
-      display: block;
-      // box-sizing: border-box;
-      width: 15px;
-      height: 25px;
-      padding: 0 0 10px 0;
-      border-radius: 50%;
-			color: #015660;
-      font-size: 1.5rem;
-			text-decoration: none;
-			position: fixed;
-      left:50%;
-      transform: translateX(-50%);
-			bottom: 10px;
-			// margin:0 auto;     
-      text-align: center; 
-		}
-.flecha:hover {
-  transform:scale(1.2);
-}
+
   
 
 // .staf-logo {
