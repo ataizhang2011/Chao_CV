@@ -339,8 +339,27 @@ nav_cv {
   margin: 10px auto; 
   } 
 }
+.flecha {
+			background-color:#f7dc4f;
+      // display: block;
+      // box-sizing: border-box;
+      width: 15px;
+      height: 25px;
+      padding: 0 0 10px 0;
+      border-radius: 50%;
+			color: #015660;
+      font-size: 1.5rem;
+			text-decoration: none;
+			position: fixed;
+			bottom: 10px;
+			right: 10px;        
+      text-align: center; 
 
-
+		}
+.flecha:hover {
+  transform:scale(1.2);
+}
+  
 
 // .staf-logo {
 //   display: block;

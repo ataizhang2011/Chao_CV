@@ -46,6 +46,20 @@ $('.nav_cv').click(function(){
   $(this).hide();
   $('.menu').show();
 });
+$('.flecha').hide();
+$(document).scroll(function(){
+  if($(document).scrollTop() > 80){
+     $('.flecha').show();    
+  }else{
+    $('.flecha').hide();
+  }
+});
+
+// $('.flecha').hover(function(){
+//   $(this).css('transform','scale(1.1)')
+// },function(){
+//    $(this).css('transform','scale(1.0)')
+// });
 
 // const menu = document.querySelector('.menu');
 // const menunav = document.querySelector('.menunav');
